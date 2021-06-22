@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+	<!-- Basic -->
+	<base th:href="${webPage.mainHtml5Base}">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>金寶貝-商品預購頁</title>
+	<meta name="keywords" content="toystore"/>
+	<meta name="description" content="toystore shop">
+	<meta name="author" content="Yung Lee">
+	<!-- Favicon -->
+	<link rel="shortcut icon" th:href="@{img/favicon.ico}" type="image/x-icon">
+	<link rel="apple-touch-icon" th:href="@{img/apple-touch-icon.png}">
+	<!-- Mobile Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+	<link id="googleFonts" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7CShadows+Into+Light%7CPlayfair+Display:400&display=swap" rel="stylesheet" type="text/css">
+	<!-- Vendor CSS -->
+	<link rel="stylesheet" th:href="@{vendor/bootstrap/bootstrap.min.css}">
+	<link rel="stylesheet" th:href="@{vendor/fontawesome-free/css/all.min.css}">
+	<link rel="stylesheet" th:href="@{vendor/animate/animate.compat.css}">
+	<link rel="stylesheet" th:href="@{vendor/simple-line-icons/css/simple-line-icons.min.css}">
+	<link rel="stylesheet" th:href="@{vendor/owl.carousel/owl.carousel.min.css}">
+	<link rel="stylesheet" th:href="@{vendor/owl.carousel/owl.theme.default.min.css}">
+	<link rel="stylesheet" th:href="@{vendor/magnific-popup/magnific-popup.min.css}">
+	<link rel="stylesheet" th:href="@{vendor/bootstrap-star-rating/star-rating.min.css}">
+	<link rel="stylesheet" th:href="@{vendor/bootstrap-star-rating/themes/krajee-fas/theme.min.css}">
+	<!-- CDN Source	-->
+	<link rel="stylesheet" th:if="${webPage.enableCDN}" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css}" integrity="sha512-aEe/ZxePawj0+G2R+AaIxgrQuKT68I28qh+wgLrcAJOz3rxCP+TwrK5SPN+E5I+1IQjNtcfvb96HDagwrKRdBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" th:if="${webPage.enableCDN}" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.css}" integrity="sha512-WvVX1YO12zmsvTpUQV8s7ZU98DnkaAokcciMZJfnNWyNzm7//QRV61t4aEr0WdIa4pe854QHLTV302vH92FSMw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- Theme CSS -->
+	<link rel="stylesheet" th:href="@{css/theme/theme.css}">
+	<link rel="stylesheet" th:href="@{css/theme/theme-blog.css}">
+	<link rel="stylesheet" th:href="@{css/theme/theme-elements.css}">
+	<link rel="stylesheet" th:href="@{css/theme/theme-shop.css}">
+	<!-- Skin CSS -->
+	<link id="skinCSS" rel="stylesheet" th:href="@{css/skins/default.css}">
+	<!-- Theme Custom CSS -->
+	<link rel="stylesheet" th:href="@{css/custom.css}">
+	<link rel="stylesheet" th:if="${webPage.isMainCssLayout}" th:href="${webPage.mainCssLayout}">
+	<!-- Head Libs -->
+	<script src="vendor/modernizr/modernizr.min.js"></script>
+</head>
+<body data-plugin-page-transition>
+<div class="body">
+	<notice th:if="${webPage.isMainNotice}" th:insert="fragments/notice :: notice"></notice>
+	<header th:if="${webPage.isMainHeader}" th:insert="fragments/header :: header"></header>
+	<div th:if="${webPage.isMainContent}" th:insert="${webPage.mainContent}"></div>
+	<footer th:if="${webPage.isMainFooter}" th:insert="fragments/footer :: footer"></footer>
+</div>
+<!-- Vendor -->
+<script th:src="@{vendor/jquery/jquery.min.js}"></script>
+<script th:src="@{vendor/jquery.appear/jquery.appear.min.js}"></script>
+<script th:src="@{vendor/jquery.easing/jquery.easing.min.js}"></script>
+<script th:src="@{vendor/jquery.cookie/jquery.cookie.min.js}"></script>
+<script th:src="@{vendor/popper/umd/popper.min.js}"></script>
+<script th:src="@{vendor/bootstrap/bootstrap.min.js}"></script>
+<script th:src="@{vendor/jquery.validation/jquery.validate.min.js}"></script>
+<script th:src="@{vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js}"></script>
+<script th:src="@{vendor/jquery.gmap/jquery.gmap.min.js}"></script>
+<script th:src="@{vendor/lazysizes/lazysizes.min.js}"></script>
+<script th:src="@{vendor/isotope/jquery.isotope.min.js}"></script>
+<script th:src="@{vendor/owl.carousel/owl.carousel.min.js}"></script>
+<script th:src="@{vendor/magnific-popup/jquery.magnific-popup.min.js}"></script>
+<script th:src="@{vendor/vide/jquery.vide.min.js}"></script>
+<script th:src="@{vendor/vivus/vivus.min.js}"></script>
+<script th:src="@{vendor/bootstrap-star-rating/star-rating.min.js}"></script>
+<script th:src="@{vendor/bootstrap-star-rating/themes/krajee-fas/theme.min.js}"></script>
+<script th:src="@{vendor/jquery.countdown/jquery.countdown.min.js}"></script>
+<script th:if="${webPage.isElevateZoom}" th:src="@{vendor/elevatezoom/jquery.elevatezoom.min.js}"></script>
+<!--CDN Source-->
+<script th:if="${webPage.enableCDN}" th:src="@{https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js}" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script th:if="${webPage.enableCDN}" th:src="@{https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js}" integrity="sha512-GDey37RZAxFkpFeJorEUwNoIbkTwsyC736KNSYucu1WJWFK9qTdzYub8ATxktr6Dwke7nbFaioypzbDOQykoRg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script th:if="${webPage.enableCDN}" th:src="@{https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/dropzone.min.js}" integrity="sha512-llCHNP2CQS+o3EUK2QFehPlOngm8Oa7vkvdUpEFN71dVOf3yAj9yMoPdS5aYRTy8AEdVtqUBIsVThzUSggT0LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- Theme Base, Components and Settings -->
+<script th:src="@{js/theme.js}"></script>
+<!-- Current Page Vendor and Views -->
+<script th:src="@{js/view.shop.js}"></script>
+<!-- Theme Custom -->
+<script th:src="@{js/custom.js}"></script>
+<!-- Theme Initialization Files -->
+<script th:src="@{js/theme.init.js}"></script>
+<script th:if="${webPage.isMainScriptLayout}" th:src="${webPage.mainScriptLayout}"></script>
+</body>
+</html>

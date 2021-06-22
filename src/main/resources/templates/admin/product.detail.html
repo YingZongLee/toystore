@@ -1,0 +1,90 @@
+<div id="examples" class="container py-2 pt-5">
+	<div class="row">
+		<div class="col-lg-12 order-1 order-lg-2">
+			<h4 class="mb-3">預購商品上架</h4>
+			<div class="card mb-4">
+				<div class="card-body">
+					<div class="row">
+						<div class="col">
+							<form class="contact-form form-fields-rounded" action="php/contact-form.php" method="POST">
+								<div class="contact-form-success alert alert-success d-none mt-4">
+									<strong>Success!</strong> Your message has been sent to us.
+								</div>
+								<div class="contact-form-error alert alert-danger d-none mt-4">
+									<strong>Error!</strong> There was an error sending your message.
+									<span class="mail-error-message text-1 d-block"></span>
+								</div>
+								<div class="form-row">
+									<div class="form-group col">
+										<label class="mb-1 text-2">圖片</label>
+										<div id="dz" class="form-control text-3 h-auto py-2 dropzone dz-clickable" data-url="admin/prod/upload"></div>
+										<div class="d-flex justify-content-end mt-2">
+											<button type="button" class="btn btn-rounded btn-sm btn-primary float-right" id="dzUpload"><i class="mr-1 icon-cloud-upload icons"></i>儲存</button>
+											<button type="button" class="btn btn-rounded btn-sm btn-secondary float-right ml-1" id="dzCancel"><i class="mr-1 icon-close icons"></i>取消</button>
+										</div>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-group col-lg-6">
+										<label class="mb-1 text-2">開始時間</label>
+										<div class="input-group date" id="dpStart">
+											<input type="text" class="form-control text-3 h-auto py-2">
+											<span class="input-group-addon"><span class="icon-calendar icons"></span></span>
+										</div>
+									</div>
+									<div class="form-group col-lg-6">
+										<label class="mb-1 text-2">結束時間</label>
+										<div class="input-group date" id="dpEnd">
+											<input type="text" class="form-control text-3 h-auto py-2">
+											<span class="input-group-addon"><span class="icon-calendar icons"></span></span>
+										</div>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-group col-lg-6">
+										<label class="mb-1 text-2">品名</label>
+										<input type="text" value="" data-msg-required="Please enter the subject." maxlength="64" class="form-control text-3 h-auto py-2" name="title" required>
+									</div>
+									<div class="form-group col-lg-6">
+										<label class="mb-1 text-2">系列</label>
+										<input type="text" value="" data-msg-required="Please enter the subject." maxlength="64" class="form-control text-3 h-auto py-2" name="subject" required>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-group col-lg-6">
+										<label class="mb-1 text-2">金額</label>
+										<input type="number" value="" data-msg-required="Please enter the price" min="0" step="any" class="form-control text-3 h-auto py-2" name="price" required>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-group col">
+										<label class="mb-1 text-2">商品描述(一)</label>
+										<textarea maxlength="120" data-msg-required="請輸入商品描述" rows="1" class="form-control text-3 h-auto py-2" name="desc1" required></textarea>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-group col">
+										<label class="mb-1 text-2">商品描述(二)</label>
+										<textarea maxlength="120" data-msg-required="請輸入商品描述" rows="1" class="form-control text-3 h-auto py-2" name="desc2"></textarea>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-group col">
+										<label class="mb-1 text-2">商品描述(三)</label>
+										<textarea maxlength="120" data-msg-required="請輸入商品描述" rows="1" class="form-control text-3 h-auto py-2" name="desc3"></textarea>
+									</div>
+								</div>
+								
+								<div class="form-row">
+									<div class="form-group col">
+										<input type="submit" value="Submit Form" class="btn btn-primary" data-loading-text="Loading...">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

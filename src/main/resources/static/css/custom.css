@@ -1,0 +1,18 @@
+/* Add here all your CSS customizations */
+.input-group.date .input-group-addon {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 2;
+    color: #555;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 6px 18px 6px 12px;
+    border-radius: 0 35px 35px 0;
+}
+
+@media (max-width: 991px) {
+    .search-with-select .search-form-wrapper {
+        left: 20%;
+    }
+}
